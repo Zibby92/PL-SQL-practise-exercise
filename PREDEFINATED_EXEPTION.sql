@@ -1,0 +1,15 @@
+
+SET SERVEROUTPUT ON;
+
+-- przyk³ad
+DECLARE
+    v_liczba NUMBER;
+BEGIN
+    CASE
+        WHEN v_liczba IS NOT NULL THEN NULL;
+    END CASE;
+EXCEPTION
+    WHEN CASE_NOT_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('Twój komunikat');
+END;
+/
